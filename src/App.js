@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import PersonalInformation from './components/PersonalInformation.js'
+import Display from './components/Display.js'
+import './app.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      personalInformation: {
+        name: 'test name',
+        jobTitle: 'test job title',
+        photo: 'fake photo??',
+        address: '310 first street, josephino brazil',
+        phoneNumber: '1234567890',
+        email: 'batman@batmail.com',
+        biography: 'i once was a nerd and now i am a giganerd making gigachad moves in the brain of a gigaroni'
+      },
+    }
+  }
+  render() {
+    return (
+      <div>
+        <PersonalInformation />
+        <Display data={this.state.personalInformation}/>
+      </div>
+    );
+  }
+
 }
 
 export default App;
