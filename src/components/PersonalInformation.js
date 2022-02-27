@@ -20,18 +20,24 @@ export default class PersonalInformation extends Component {
       email: '',
       biography: '',
     }
+    this.changeParentState = this.changeParentState.bind(this)
+  }
+
+  changeParentState (info, value) {
+    this.setState({[info]: value})
+
   }
   render() {
     return(
       <div id="personal-information-input">
       Personal Information:
-        <Name />
-        <JobTitle />
-        <Photo />
-        <Address />
-        <PhoneNumber />
-        <Email />
-        <Biography />
+        <Name info="name" changeParentState={this.changeParentState}/>
+        <JobTitle info="jobTitle" changeParentState={this.changeParentState}/>
+        <Photo info="photo" changeParentState={this.changeParentState}/>
+        <Address info="address" changeParentState={this.changeParentState}/>
+        <PhoneNumber info="phoneNumber" changeParentState={this.changeParentState}/>
+        <Email info="email" changeParentState={this.changeParentState}/>
+        <Biography info="biography" changeParentState={this.changeParentState}/>
       </div>
     )
   }
