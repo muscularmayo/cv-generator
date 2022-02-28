@@ -7,6 +7,9 @@ export default class Education extends Component {
     this.handleChange = this.handleChange.bind(this)
   }
 
+  handleChange (info) {
+
+  }
 
 
 

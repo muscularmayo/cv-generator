@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PersonalInformation from './components/PersonalInformation.js'
 import Education from './components/Education.js'
+import Experience from './components/Experience.js'
 import Display from './components/Display.js'
 import './app.css';
 
@@ -48,6 +49,7 @@ class App extends Component {
       <div>
           <PersonalInformation handlePersonalInformationChange={this.handlePersonalInformationChange}/>
           <Education handleEducationChange={this.handleEducationChange} />
+          <Experience handleExperienceChange={this.handleExperienceChange} />
           <Display data={this.state}/>
       </div>
     );
