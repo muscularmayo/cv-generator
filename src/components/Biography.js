@@ -10,7 +10,7 @@ export default class Biography extends Component {
   }
 
   handleChange (event) {
-    this.props.changeParentState(this.props.info, event.target.value)
+    this.props.changeAppState(this.props.info, event.target.value)
     this.setState({value: event.target.value})
   }
 

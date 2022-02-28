@@ -11,33 +11,29 @@ import Biography from './Biography.js'
 export default class PersonalInformation extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      name: '',
-      jobTitle: '',
-      photo: '',
-      address: '',
-      phoneNumber: '',
-      email: '',
-      biography: '',
-    }
-    this.changeParentState = this.changeParentState.bind(this)
+
+    this.changeAppState = this.changeAppState.bind(this)
   }
 
-  changeParentState (info, value) {
-    this.setState({[info]: value})
+  // changeParentState (info, value) {
+  //   this.setState({[info]: value})
+  // }
 
+  changeAppState (info, value) {
+    this.props.handlePersonalInformationChange(info, value)
   }
+
   render() {
     return(
       <div id="personal-information-input">
       Personal Information:
-        <Name info="name" changeParentState={this.changeParentState}/>
-        <JobTitle info="jobTitle" changeParentState={this.changeParentState}/>
-        <Photo info="photo" changeParentState={this.changeParentState}/>
-        <Address info="address" changeParentState={this.changeParentState}/>
-        <PhoneNumber info="phoneNumber" changeParentState={this.changeParentState}/>
-        <Email info="email" changeParentState={this.changeParentState}/>
-        <Biography info="biography" changeParentState={this.changeParentState}/>
+        <Name info="name" changeAppState={this.changeAppState}/>
+        <JobTitle info="jobTitle" changeAppState={this.changeAppState}/>
+        <Photo info="photo" changeAppState={this.changeAppState}/>
+        <Address info="address" changeAppState={this.changeAppState}/>
+        <PhoneNumber info="phoneNumber" changeAppState={this.changeAppState}/>
+        <Email info="email" changeAppState={this.changeAppState}/>
+        <Biography info="biography" changeAppState={this.changeAppState}/>
       </div>
     )
   }

@@ -8,21 +8,29 @@ class App extends Component {
     super(props)
     this.state = {
       personalInformation: {
-        name: 'test name',
-        jobTitle: 'test job title',
-        photo: 'fake photo??',
-        address: '310 first street, josephino brazil',
-        phoneNumber: '1234567890',
-        email: 'batman@batmail.com',
-        biography: 'i once was a nerd and now i am a giganerd making gigachad moves in the brain of a gigaroni'
+        name: '',
+        jobTitle: '',
+        photo: '',
+        address: '',
+        phoneNumber: '',
+        email: '',
+        biography: ''
       },
     }
+    this.handlePersonalInformationChange = this.handlePersonalInformationChange.bind(this)
   }
+
+  handlePersonalInformationChange (info, value) {
+    const personalInformation = {...this.state.personalInformation}
+    personalInformation[info] = value;
+    this.setState({personalInformation})
+  }
+
   render() {
     return (
       <div>
-        <PersonalInformation />
-        <Display data={this.state.personalInformation}/>
+        <PersonalInformation handlePersonalInformationChange={this.handlePersonalInformationChange}/>
+        <Display data={this.state}/>
       </div>
     );
   }

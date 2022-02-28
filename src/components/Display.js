@@ -3,17 +3,26 @@ import React, { Component } from 'react';
 export default class Display extends Component {
   // this will contain all the info that's gonnab e input, all dependent on props being passed in
   render() {
-    const data = this.props.data
+    const personalInformation = this.props.data.personalInformation
     return (
-      <div>
-        <div id="name">Name: {data.name}</div>
-        <div id="job-title">Job Title: {data.jobTitle}</div>
-        <div id="photo">Photo: {data.photo}</div>
-        <div id="address">Address: {data.address}</div>
-        <div id="phone-number">Phone Number: {data.phoneNumber}</div>
-        <div id="email">Email: {data.email} </div>
-        <div id="biography">Biography: {data.biography} </div>
+      <div id="display">
+        <div id="personal-info-display">
+          <div id="name">Name: {personalInformation.name}</div>
+          <div id="job-title">Job Title: {personalInformation.jobTitle}</div>
+          <div id="photo">Photo: {personalInformation.photo}</div>
+          <div id="address">Address: {personalInformation.address}</div>
+          <div id="phone-number">Phone Number: {personalInformation.phoneNumber}</div>
+          <div id="email">Email: {personalInformation.email} </div>
+          <div id="biography">Biography: {personalInformation.biography} </div>
+        </div>
+        <div id="experience-display">
+
+        </div>
+        <div id="education-display">
+
+        </div>
       </div>
+
     )
   }
 
