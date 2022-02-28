@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PersonalInformation from './components/PersonalInformation.js'
+import Education from './components/Education.js'
 import Display from './components/Display.js'
 import './app.css';
 
@@ -16,8 +17,12 @@ class App extends Component {
         email: '',
         biography: ''
       },
+      education: [],
+      experience: [],
     }
     this.handlePersonalInformationChange = this.handlePersonalInformationChange.bind(this)
+    this.handleEducationChange = this.handleEducationChange.bind(this)
+    this.handleExperienceChange = this.handleExperienceChange.bind(this)
   }
 
   handlePersonalInformationChange (info, value) {
@@ -26,11 +31,24 @@ class App extends Component {
     this.setState({personalInformation})
   }
 
+  handleEducationChange (info) {
+    const educationInfo = [...this.state.education]
+    educationInfo.push(info)
+    this.setState({education: educationInfo})
+  }
+
+  handleExperienceChange (info) {
+    const experienceInfo = [...this.state.experience]
+    experienceInfo.push(info)
+    this.setState({experience: experienceInfo})
+  }
+
   render() {
     return (
       <div>
-        <PersonalInformation handlePersonalInformationChange={this.handlePersonalInformationChange}/>
-        <Display data={this.state}/>
+          <PersonalInformation handlePersonalInformationChange={this.handlePersonalInformationChange}/>
+          <Education handleEducationChange={this.handleEducationChange} />
+          <Display data={this.state}/>
       </div>
     );
   }

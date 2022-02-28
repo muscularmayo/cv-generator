@@ -9,7 +9,7 @@ import Biography from './Biography.js'
 
 
 export default class PersonalInformation extends Component {
-  constructor(props) {
+  constructor(props) { //unneeded if there's no state or eventhandlers to bind - but there are
     super(props)
 
     this.changeAppState = this.changeAppState.bind(this)
