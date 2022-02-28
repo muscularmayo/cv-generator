@@ -16,7 +16,7 @@ export default class Experience extends Component {
 
   render() {
     return (
-      <div id="education-input">
+      <div id="experience-input">
 
       </div>
     )

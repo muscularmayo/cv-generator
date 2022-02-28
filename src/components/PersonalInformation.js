@@ -13,6 +13,7 @@ export default class PersonalInformation extends Component {
     super(props)
 
     this.changeAppState = this.changeAppState.bind(this)
+    this.onSubmit = this.onSubmit.bind(this)
   }
 
   // changeParentState (info, value) {
@@ -23,17 +24,21 @@ export default class PersonalInformation extends Component {
     this.props.handlePersonalInformationChange(info, value)
   }
 
+  onSubmit (event) {
+    event.preventDefault();
+  }
+
   render() {
     return(
       <div id="personal-information-input">
       Personal Information:
-        <Name info="name" changeAppState={this.changeAppState}/>
-        <JobTitle info="jobTitle" changeAppState={this.changeAppState}/>
-        <Photo info="photo" changeAppState={this.changeAppState}/>
-        <Address info="address" changeAppState={this.changeAppState}/>
-        <PhoneNumber info="phoneNumber" changeAppState={this.changeAppState}/>
-        <Email info="email" changeAppState={this.changeAppState}/>
-        <Biography info="biography" changeAppState={this.changeAppState}/>
+        <Name info="name" onSubmit={this.onSubmit} changeAppState={this.changeAppState}/>
+        <JobTitle info="jobTitle" onSubmit={this.onSubmit} changeAppState={this.changeAppState}/>
+        <Photo info="photo" onSubmit={this.onSubmit} changeAppState={this.changeAppState}/>
+        <Address info="address" onSubmit={this.onSubmit} changeAppState={this.changeAppState}/>
+        <PhoneNumber info="phoneNumber" onSubmit={this.onSubmit} changeAppState={this.changeAppState}/>
+        <Email info="email" onSubmit={this.onSubmit} changeAppState={this.changeAppState}/>
+        <Biography info="biography" onSubmit={this.onSubmit} changeAppState={this.changeAppState}/>
       </div>
     )
   }

@@ -16,7 +16,7 @@ export default class Photo extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.props.onSubmit}>
         <label>
           Photo:
           <input type="text" value={this.state.value}  onChange={this.handleChange}/>

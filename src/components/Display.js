@@ -15,10 +15,10 @@ export default class Display extends Component {
           <div id="email">Email: {personalInformation.email} </div>
           <div id="biography">Biography: {personalInformation.biography} </div>
         </div>
-        <div id="experience-display">
+        <div id="education-display">
 
         </div>
-        <div id="education-display">
+        <div id="experience-display">
 
         </div>
       </div>
