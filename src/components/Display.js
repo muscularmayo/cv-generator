@@ -8,6 +8,13 @@ export default class Display extends Component {
     const experienceInformation = this.props.data.experience;
     // const education = this.props.data.education
     // const experience = this.props.data.experience
+
+    const educationList = educationInformation.map((element) => {
+      //element is an object
+      element.forEach((property) => {
+
+      })
+    })
     return (
       <div id="display">
         <div id="personal-info-display">
