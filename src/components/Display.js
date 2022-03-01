@@ -16,10 +16,10 @@ export default class Display extends Component {
           <div id="biography">Biography: {personalInformation.biography} </div>
         </div>
         <div id="education-display">
-
+          {/* we are going to have to loop through education array or something to make this part work */}
         </div>
         <div id="experience-display">
-
+          {/* same for looping through experience array*/}
         </div>
       </div>
 

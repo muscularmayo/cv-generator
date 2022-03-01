@@ -32,13 +32,13 @@ export default class PersonalInformation extends Component {
     return(
       <div id="personal-information-input">
       Personal Information:
-        <Name info="name" onSubmit={this.onSubmit} changeAppState={this.changeAppState}/>
-        <JobTitle info="jobTitle" onSubmit={this.onSubmit} changeAppState={this.changeAppState}/>
-        <Photo info="photo" onSubmit={this.onSubmit} changeAppState={this.changeAppState}/>
-        <Address info="address" onSubmit={this.onSubmit} changeAppState={this.changeAppState}/>
-        <PhoneNumber info="phoneNumber" onSubmit={this.onSubmit} changeAppState={this.changeAppState}/>
-        <Email info="email" onSubmit={this.onSubmit} changeAppState={this.changeAppState}/>
-        <Biography info="biography" onSubmit={this.onSubmit} changeAppState={this.changeAppState}/>
+        <Name info="name" value={this.props.personalInformationState.name} onSubmit={this.onSubmit} changeAppState={this.changeAppState}/>
+        <JobTitle info="jobTitle" value={this.props.personalInformationState.jobTitle} onSubmit={this.onSubmit} changeAppState={this.changeAppState}/>
+        <Photo info="photo" value={this.props.personalInformationState.photo} onSubmit={this.onSubmit} changeAppState={this.changeAppState}/>
+        <Address info="address" value={this.props.personalInformationState.address} onSubmit={this.onSubmit} changeAppState={this.changeAppState}/>
+        <PhoneNumber info="phoneNumber" value={this.props.personalInformationState.phoneNumber} onSubmit={this.onSubmit} changeAppState={this.changeAppState}/>
+        <Email info="email" value={this.props.personalInformationState.email} onSubmit={this.onSubmit} changeAppState={this.changeAppState}/>
+        <Biography info="biography" value={this.props.personalInformationState.biography} onSubmit={this.onSubmit} changeAppState={this.changeAppState}/>
       </div>
     )
   }

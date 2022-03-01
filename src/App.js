@@ -47,7 +47,7 @@ class App extends Component {
   render() {
     return (
       <div>
-          <PersonalInformation handlePersonalInformationChange={this.handlePersonalInformationChange}/>
+          <PersonalInformation personalInformationState={this.state.personalInformation} handlePersonalInformationChange={this.handlePersonalInformationChange}/>
           <Education handleEducationChange={this.handleEducationChange} />
           <Experience handleExperienceChange={this.handleExperienceChange} />
           <Display data={this.state}/>
