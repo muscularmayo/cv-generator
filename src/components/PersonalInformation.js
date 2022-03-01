@@ -31,7 +31,7 @@ export default class PersonalInformation extends Component {
   render() {
     return(
       <div id="personal-information-input">
-      Personal Information:
+      Personal Information
         <Name info="name" value={this.props.personalInformationState.name} onSubmit={this.onSubmit} changeAppState={this.changeAppState}/>
         <JobTitle info="jobTitle" value={this.props.personalInformationState.jobTitle} onSubmit={this.onSubmit} changeAppState={this.changeAppState}/>
         <Photo info="photo" value={this.props.personalInformationState.photo} onSubmit={this.onSubmit} changeAppState={this.changeAppState}/>

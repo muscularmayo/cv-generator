@@ -4,6 +4,8 @@ export default class Display extends Component {
   // this will contain all the info that's gonnab e input, all dependent on props being passed in
   render() {
     const personalInformation = this.props.data.personalInformation
+    const educationInformation = this.props.data.education;
+    const experienceInformation = this.props.data.experience;
     // const education = this.props.data.education
     // const experience = this.props.data.experience
     return (

@@ -18,8 +18,21 @@ class App extends Component {
         email: '',
         biography: ''
       },
-      education: [],
-      experience: [],
+      education: [{
+        university: '',
+        city: '',
+        degree: '',
+        subject: '',
+        from: '',
+        to: '',
+      }],
+      experience: [{
+        position: '',
+        company: '',
+        city: '',
+        from: '',
+        to: '',
+      }],
     }
     this.handlePersonalInformationChange = this.handlePersonalInformationChange.bind(this)
     this.handleEducationChange = this.handleEducationChange.bind(this)
@@ -48,8 +61,8 @@ class App extends Component {
     return (
       <div>
           <PersonalInformation personalInformationState={this.state.personalInformation} handlePersonalInformationChange={this.handlePersonalInformationChange}/>
-          <Education handleEducationChange={this.handleEducationChange} />
-          <Experience handleExperienceChange={this.handleExperienceChange} />
+          <Education educationState={this.state.education} handleEducationChange={this.handleEducationChange} />
+          <Experience experienceState={this.state.experience} handleExperienceChange={this.handleExperienceChange} />
           <Display data={this.state}/>
       </div>
     );

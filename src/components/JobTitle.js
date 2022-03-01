@@ -11,6 +11,10 @@ export default class JobTitle extends Component {
     this.props.changeAppState(this.props.info, event.target.value)
   }
 
+  addEducation () {
+    // we will add another object here
+  }
+
   render() {
     return (
       <form onSubmit={this.props.onSubmit}>
