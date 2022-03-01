@@ -21,6 +21,10 @@ export default class Education extends Component {
 
   }
 
+  addEducation () {
+    // we will add another object here
+  }
+
   render() {
     return (
       <div id="education-input">
