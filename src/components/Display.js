@@ -22,6 +22,18 @@ export default class Display extends Component {
         </div>
       )
     })
+
+    const experienceList = experienceInformation.map((element, index) => {
+      return (
+        <div key={'experience' + index}>
+          <div>Position: {element.position} </div>
+          <div>Company: {element.company} </div>
+          <div>City: {element.city} </div>
+          <div>From: {element.from} </div>
+          <div>To: {element.to} </div>
+        </div>
+      )
+    })
     return (
       <div id="display">
         <div id="personal-info-display">
@@ -37,7 +49,7 @@ export default class Display extends Component {
           {educationList}
         </div>
         <div id="experience-display">
-          {/* same for looping through experience array*/}
+          {experienceList}
         </div>
       </div>
 

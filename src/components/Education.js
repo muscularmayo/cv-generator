@@ -8,7 +8,6 @@ export default class Education extends Component {
   }
 
   handleChange (info) {
-    const currentState = [...this.props.educationState]
     const educationObject = {
       university: '',
       city: '',
@@ -18,7 +17,7 @@ export default class Education extends Component {
       to: '',
     }
 
-    currentState.push(educationObject)
+    this.props.handleEducationChange(educationObject)
 
   }
 
@@ -29,27 +28,27 @@ export default class Education extends Component {
         <form onSubmit={this.props.onSubmit}>
         <label>
           University:
-          <input type="text"></input>
+          <input value="university" type="text"></input>
         </label>
         <label>
           City:
-          <input type="text"></input>
+          <input value="city" type="text"></input>
         </label>
         <label>
           Degree:
-          <input type="text"></input>
+          <input value="degree" type="text"></input>
         </label>
         <label>
           Subject:
-          <input type="text"></input>
+          <input value="subject" type="text"></input>
         </label>
         <label>
           From:
-          <input type="text"></input>
+          <input value="from" type="text"></input>
         </label>
         <label>
           To:
-          <input type="text"></input>
+          <input value="to" type="text"></input>
         </label>
       </form>
       </div>

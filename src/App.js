@@ -25,14 +25,6 @@ class App extends Component {
         subject: '',
         from: '',
         to: '',
-      },
-      {
-        university: 'uni1',
-        city: 'city1',
-        degree: 'degree1',
-        subject: 'subject1',
-        from: '111',
-        to: '1111',
       }],
       experience: [{
         position: '',
