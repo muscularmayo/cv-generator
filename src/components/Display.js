@@ -9,11 +9,18 @@ export default class Display extends Component {
     // const education = this.props.data.education
     // const experience = this.props.data.experience
 
-    const educationList = educationInformation.map((element) => {
+    const educationList = educationInformation.map((element, index) => {
       //element is an object
-      element.forEach((property) => {
-
-      })
+      return(
+        <div key={'education' + index}>
+          <div>University: {element.university} </div>
+          <div>City: {element.city} </div>
+          <div>Degree: {element.degree} </div>
+          <div>Subject: {element.subject} </div>
+          <div>From: {element.from} </div>
+          <div>To: {element.to} </div>
+        </div>
+      )
     })
     return (
       <div id="display">
@@ -27,7 +34,7 @@ export default class Display extends Component {
           <div id="biography">Biography: {personalInformation.biography} </div>
         </div>
         <div id="education-display">
-          {/* we are going to have to loop through education array or something to make this part work */}
+          {educationList}
         </div>
         <div id="experience-display">
           {/* same for looping through experience array*/}
