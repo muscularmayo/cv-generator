@@ -17,6 +17,7 @@ export default class Experience extends Component {
   render() {
     return (
       <div id="experience-input">
+        Experience:
 
       </div>
     )

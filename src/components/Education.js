@@ -17,6 +17,7 @@ export default class Education extends Component {
   render() {
     return (
       <div id="education-input">
+        Education:
 
       </div>
     )
