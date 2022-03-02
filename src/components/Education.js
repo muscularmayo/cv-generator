@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 export default class Education extends Component {
   constructor(props) {
     super(props)
-
+    this.state = {
+      count: 1
+    }
     this.handleChange = this.handleChange.bind(this)
   }
 
@@ -26,38 +28,43 @@ export default class Education extends Component {
   }
 
   render() {
-    return (
-      <div id="education-input">
-        Education
-        <form onSubmit={this.props.onSubmit}>
-        <label>
-          University:
-          <input value="university" type="text"></input>
-        </label>
-        <label>
-          City:
-          <input value="city" type="text"></input>
-        </label>
-        <label>
-          Degree:
-          <input value="degree" type="text"></input>
-        </label>
-        <label>
-          Subject:
-          <input value="subject" type="text"></input>
-        </label>
-        <label>
-          From:
-          <input value="from" type="text"></input>
-        </label>
-        <label>
-          To:
-          <input value="to" type="text"></input>
-        </label>
-      </form>
-      </div>
+    let x = []
+    for(let i = 0; i < this.state.count; i++) {
+      x.push(
+        <div id={'education' + i} key={'education' + i}>
+          Education
+          <form onSubmit={this.props.onSubmit}>
+          <label>
+            University:
+            <input defaultValue="university" type="text"></input>
+          </label>
+          <label>
+            City:
+            <input defaultValue="city" type="text"></input>
+          </label>
+          <label>
+            Degree:
+            <input defaultValue="degree" type="text"></input>
+          </label>
+          <label>
+            Subject:
+            <input defaultValue="subject" type="text"></input>
+          </label>
+          <label>
+            From:
+            <input defaultValue="from" type="text"></input>
+          </label>
+          <label>
+            To:
+            <input defaultValue="to" type="text"></input>
+          </label>
+          {/* add and delete button are necessary here */}
+        </form>
+        </div>
+      )
+    }
+    return x
 
-    )
   }
 
 
