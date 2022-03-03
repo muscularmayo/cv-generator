@@ -13,14 +13,20 @@ export default class Education extends Component {
   }
 
   handleChange (info, name, index) {
-    const educationObject = {
-      university: '',
-      city: '',
-      degree: '',
-      subject: '',
-      from: '',
-      to: '',
+    let educationObject;
+    if(this.props.educationState[index]) {
+      educationObject = {...this.props.educationState[index]}
+    } else {
+      educationObject = {
+        university: '',
+        city: '',
+        degree: '',
+        subject: '',
+        from: '',
+        to: '',
+      }
     }
+
     if(name && info) {
       educationObject[name] = info;
     }

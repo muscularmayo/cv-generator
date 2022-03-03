@@ -25,11 +25,11 @@ export default class EducationForm extends Component {
     return (
       <form onSubmit={this.props.onSubmit}>
         <input index={this.props.index} name="university" placeholder="University name" type="text" onChange={this.changeAppState}></input>
-        <input index={this.props.index} name="city" placeholder="City" type="text"></input>
-        <input index={this.props.index} name="degree" placeholder="Degree" type="text"></input>
-        <input index={this.props.index} name="subject" placeholder="Subject" type="text"></input>
-        <input index={this.props.index} name="from" placeholder="From" type="text"></input>
-        <input index={this.props.index} name="to" placeholder="To" type="text"></input>
+        <input index={this.props.index} name="city" placeholder="City" type="text" onChange={this.changeAppState}></input>
+        <input index={this.props.index} name="degree" placeholder="Degree" type="text" onChange={this.changeAppState}></input>
+        <input index={this.props.index} name="subject" placeholder="Subject" type="text" onChange={this.changeAppState}></input>
+        <input index={this.props.index} name="from" placeholder="From" type="text" onChange={this.changeAppState}></input>
+        <input index={this.props.index} name="to" placeholder="To" type="text" onChange={this.changeAppState}></input>
       </form>
     )
   }
