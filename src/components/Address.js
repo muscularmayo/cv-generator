@@ -14,10 +14,9 @@ export default class Address extends Component {
   render() {
     return (
       <form onSubmit={this.props.onSubmit}>
-        <label>
-          Address:
-          <input type="text" value={this.props.value}  onChange={this.handleChange}/>
-        </label>
+
+          <input placeholder="Address" type="text" value={this.props.value}  onChange={this.handleChange}/>
+
       </form>
     );
   }

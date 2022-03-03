@@ -14,10 +14,7 @@ export default class Biography extends Component {
   render() {
     return (
       <form onSubmit={this.props.onSubmit}>
-        <label>
-          Biography:
-          <input type="text" value={this.props.value}  onChange={this.handleChange}/>
-        </label>
+          <input placeholder="Biography" type="text" value={this.props.value}  onChange={this.handleChange}/>
       </form>
     );
   }

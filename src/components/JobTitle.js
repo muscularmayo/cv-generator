@@ -14,10 +14,9 @@ export default class JobTitle extends Component {
   render() {
     return (
       <form onSubmit={this.props.onSubmit}>
-        <label>
-          Job Title:
-          <input type="text" value={this.props.value}  onChange={this.handleChange}/>
-        </label>
+
+          <input placeholder="Job Title" type="text" value={this.props.value}  onChange={this.handleChange}/>
+
       </form>
     );
   }

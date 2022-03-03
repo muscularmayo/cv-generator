@@ -14,10 +14,7 @@ export default class PhoneNumber extends Component {
   render() {
     return (
       <form onSubmit={this.props.onSubmit}>
-        <label>
-          Phone Number:
-          <input type="text" value={this.props.value}  onChange={this.handleChange}/>
-        </label>
+          <input placeholder="Phone number" type="text" value={this.props.value}  onChange={this.handleChange}/>
       </form>
     );
   }

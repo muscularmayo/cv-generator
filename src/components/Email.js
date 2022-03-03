@@ -14,10 +14,7 @@ export default class Email extends Component {
   render() {
     return (
       <form onSubmit={this.props.onSubmit}>
-        <label>
-          Email Address:
-          <input type="text" value={this.props.value}  onChange={this.handleChange}/>
-        </label>
+          <input placeholder="Email address" type="text" value={this.props.value}  onChange={this.handleChange}/>
       </form>
     );
   }

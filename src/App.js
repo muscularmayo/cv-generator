@@ -19,12 +19,12 @@ class App extends Component {
         biography: ''
       },
       education: [{
-        university: 'test1',
-        city: 'test1',
-        degree: 'test1',
-        subject: 'test1',
-        from: 'test1',
-        to: 'test1',
+        university: 'butt u',
+        city: '',
+        degree: '',
+        subject: '',
+        from: '',
+        to: '',
       }],
       experience: [{
         position: '',
@@ -46,9 +46,7 @@ class App extends Component {
   }
 
   handleEducationChange (info) {
-    const educationInfo = [...this.state.education]
-    educationInfo.push(info)
-    this.setState({education: educationInfo})
+
   }
 
   handleExperienceChange (info) {

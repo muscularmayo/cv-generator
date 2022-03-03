@@ -11,7 +11,7 @@ export default class Education extends Component {
     this.deleteEducation = this.deleteEducation.bind(this)
   }
 
-  handleChange (info) {
+  handleChange (event) {
     const educationObject = {
       university: '',
       city: '',
@@ -34,48 +34,30 @@ export default class Education extends Component {
   deleteEducation(event) {
     const newCount = this.state.count - 1;
     this.setState({count: newCount})
+    //event.target.id to get the key and then slice to get just the number...
     event.preventDefault();
   }
 
   render() {
     let x = []
+    x.push(<div key="education-header">Education: </div>);
     for(let i = 0; i < this.state.count; i++) {
       x.push(
         <div id={'education' + i} key={'education' + i}>
-          Education
           <form onSubmit={this.props.onSubmit}>
-          <label>
-            University:
-            <input defaultValue="university" type="text"></input>
-          </label>
-          <label>
-            City:
-            <input defaultValue="city" type="text"></input>
-          </label>
-          <label>
-            Degree:
-            <input defaultValue="degree" type="text"></input>
-          </label>
-          <label>
-            Subject:
-            <input defaultValue="subject" type="text"></input>
-          </label>
-          <label>
-            From:
-            <input defaultValue="from" type="text"></input>
-          </label>
-          <label>
-            To:
-            <input defaultValue="to" type="text"></input>
-          </label>
-          {/* add and delete button are necessary here */}
-          <button onClick={this.addEducation}>Add</button>
+            <input  name="university" id={i} onChange={this.handleChange} value={this.props.educationState.university}placeholder="University name" type="text"></input>
+            <input index={i} name="city" placeholder="City" type="text"></input>
+            <input index={i} name="degree" placeholder="Degree" type="text"></input>
+            <input index={i} name="subject" placeholder="Subject" type="text"></input>
+            <input index={i} name="from" placeholder="From" type="text"></input>
+            <input index={i} name="to" placeholder="To" type="text"></input>
           <button index={i} onClick={this.deleteEducation}>Delete</button>
         </form>
         </div>
       )
     }
-    return x
+    x.push(<button key="addButton" onClick={this.addEducation}>Add</button>);
+    return x;
 
   }
 
