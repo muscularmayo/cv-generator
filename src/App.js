@@ -39,14 +39,16 @@ class App extends Component {
     this.handleExperienceChange = this.handleExperienceChange.bind(this)
   }
 
-  handlePersonalInformationChange (info, value) {
+  handlePersonalInformationChange (name, value) {
     const personalInformation = {...this.state.personalInformation}
-    personalInformation[info] = value;
+    personalInformation[name] = value;
     this.setState({personalInformation})
   }
 
-  handleEducationChange (info) {
-
+  handleEducationChange (object, index) {
+    const educationInfo = [...this.state.education]
+    educationInfo[index] = object;
+    this.setState({education: educationInfo})
   }
 
   handleExperienceChange (info) {

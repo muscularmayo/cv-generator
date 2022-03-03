@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import EducationForm from './EducationForm'
 
 export default class Education extends Component {
   constructor(props) {
@@ -11,7 +12,7 @@ export default class Education extends Component {
     this.deleteEducation = this.deleteEducation.bind(this)
   }
 
-  handleChange (event) {
+  handleChange (info, name, index) {
     const educationObject = {
       university: '',
       city: '',
@@ -21,7 +22,9 @@ export default class Education extends Component {
       to: '',
     }
 
-    this.props.handleEducationChange(educationObject)
+    educationObject[name] = info;
+
+    this.props.handleEducationChange(educationObject, index)
   }
 
   addEducation (event) {
@@ -44,15 +47,16 @@ export default class Education extends Component {
     for(let i = 0; i < this.state.count; i++) {
       x.push(
         <div id={'education' + i} key={'education' + i}>
-          <form onSubmit={this.props.onSubmit}>
-            <input  name="university" id={i} onChange={this.handleChange} value={this.props.educationState.university}placeholder="University name" type="text"></input>
+          <EducationForm handleChange={this.handleChange} index={i} />
+          {/* <form onSubmit={this.props.onSubmit}>
+            <input name="university" id={i} onChange={this.handleChange} value={this.props.educationState.university}placeholder="University name" type="text"></input>
             <input index={i} name="city" placeholder="City" type="text"></input>
             <input index={i} name="degree" placeholder="Degree" type="text"></input>
             <input index={i} name="subject" placeholder="Subject" type="text"></input>
             <input index={i} name="from" placeholder="From" type="text"></input>
             <input index={i} name="to" placeholder="To" type="text"></input>
+          </form> */}
           <button index={i} onClick={this.deleteEducation}>Delete</button>
-        </form>
         </div>
       )
     }
