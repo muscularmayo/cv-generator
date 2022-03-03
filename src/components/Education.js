@@ -7,6 +7,8 @@ export default class Education extends Component {
       count: 1
     }
     this.handleChange = this.handleChange.bind(this)
+    this.addEducation = this.addEducation.bind(this)
+    this.deleteEducation = this.deleteEducation.bind(this)
   }
 
   handleChange (info) {
@@ -20,11 +22,19 @@ export default class Education extends Component {
     }
 
     this.props.handleEducationChange(educationObject)
-
   }
 
-  addEducation () {
+  addEducation (event) {
     // we will add another object here
+    const newCount = this.state.count + 1
+    this.setState({count: newCount})
+    event.preventDefault();
+  }
+
+  deleteEducation(event) {
+    const newCount = this.state.count - 1;
+    this.setState({count: newCount})
+    event.preventDefault();
   }
 
   render() {
@@ -59,6 +69,8 @@ export default class Education extends Component {
             <input defaultValue="to" type="text"></input>
           </label>
           {/* add and delete button are necessary here */}
+          <button onClick={this.addEducation}>Add</button>
+          <button index={i} onClick={this.deleteEducation}>Delete</button>
         </form>
         </div>
       )

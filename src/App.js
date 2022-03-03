@@ -19,12 +19,12 @@ class App extends Component {
         biography: ''
       },
       education: [{
-        university: 'a',
-        city: 'b',
-        degree: '',
-        subject: '',
-        from: '',
-        to: '',
+        university: 'test1',
+        city: 'test1',
+        degree: 'test1',
+        subject: 'test1',
+        from: 'test1',
+        to: 'test1',
       }],
       experience: [{
         position: '',
