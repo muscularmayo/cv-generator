@@ -21,8 +21,9 @@ export default class Education extends Component {
       from: '',
       to: '',
     }
-
-    educationObject[name] = info;
+    if(name && info) {
+      educationObject[name] = info;
+    }
 
     this.props.handleEducationChange(educationObject, index)
   }
@@ -30,7 +31,9 @@ export default class Education extends Component {
   addEducation (event) {
     // we will add another object here
     const newCount = this.state.count + 1
+    this.handleChange(null,null, this.state.count)
     this.setState({count: newCount})
+
     event.preventDefault();
   }
 
@@ -38,7 +41,9 @@ export default class Education extends Component {
     const newCount = this.state.count - 1;
     this.setState({count: newCount})
     //event.target.id to get the key and then slice to get just the number...
+    //event.target.id.slice(0,1)
     event.preventDefault();
+
   }
 
   render() {
@@ -56,7 +61,7 @@ export default class Education extends Component {
             <input index={i} name="from" placeholder="From" type="text"></input>
             <input index={i} name="to" placeholder="To" type="text"></input>
           </form> */}
-          <button index={i} onClick={this.deleteEducation}>Delete</button>
+          <button id={i + 'del'} onClick={this.deleteEducation}>Delete</button>
         </div>
       )
     }
