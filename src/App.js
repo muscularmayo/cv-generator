@@ -19,7 +19,7 @@ class App extends Component {
         biography: ''
       },
       education: [{
-        university: 'butt u',
+        university: '',
         city: '',
         degree: '',
         subject: '',
@@ -45,10 +45,16 @@ class App extends Component {
     this.setState({personalInformation})
   }
 
-  handleEducationChange (object, index) {
+  handleEducationChange (object, index, del) {
     const educationInfo = [...this.state.education]
-    educationInfo[index] = object;
+    if(!del) {
+      educationInfo[index] = object;
+    } else {
+      educationInfo.splice(index, 1)
+    }
     this.setState({education: educationInfo})
+
+
   }
 
   handleExperienceChange (info) {

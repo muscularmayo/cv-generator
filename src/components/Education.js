@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import EducationForm from './EducationForm'
+import EducationForm from './EducationForm';
+import Delete from './Delete.js';
 
 export default class Education extends Component {
   constructor(props) {
@@ -43,12 +44,12 @@ export default class Education extends Component {
     event.preventDefault();
   }
 
-  deleteEducation(event) {
+  deleteEducation(index) {
     const newCount = this.state.count - 1;
     this.setState({count: newCount})
     //event.target.id to get the key and then slice to get just the number...
     //event.target.id.slice(0,1)
-    event.preventDefault();
+    this.props.handleEducationChange(null, index, true)
 
   }
 
@@ -58,7 +59,7 @@ export default class Education extends Component {
     for(let i = 0; i < this.state.count; i++) {
       x.push(
         <div id={'education' + i} key={'education' + i}>
-          <EducationForm handleChange={this.handleChange} index={i} />
+          <EducationForm educationState={this.props.educationState[i]} handleChange={this.handleChange} index={i} />
           {/* <form onSubmit={this.props.onSubmit}>
             <input name="university" id={i} onChange={this.handleChange} value={this.props.educationState.university}placeholder="University name" type="text"></input>
             <input index={i} name="city" placeholder="City" type="text"></input>
@@ -66,8 +67,9 @@ export default class Education extends Component {
             <input index={i} name="subject" placeholder="Subject" type="text"></input>
             <input index={i} name="from" placeholder="From" type="text"></input>
             <input index={i} name="to" placeholder="To" type="text"></input>
-          </form> */}
-          <button id={i + 'del'} onClick={this.deleteEducation}>Delete</button>
+          </form> */
+          /* <button id={i + 'del'} onClick={this.deleteEducation}>Delete</button> */}
+          <Delete index={i} deleteEducation={this.deleteEducation} />
         </div>
       )
     }
