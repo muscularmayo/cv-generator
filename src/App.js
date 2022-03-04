@@ -57,9 +57,13 @@ class App extends Component {
 
   }
 
-  handleExperienceChange (info) {
+  handleExperienceChange (object, index, del) {
     const experienceInfo = [...this.state.experience]
-    experienceInfo.push(info)
+    if(!del) {
+      experienceInfo[index] = object;
+    } else {
+      experienceInfo.splice(index, 1)
+    }
     this.setState({experience: experienceInfo})
   }
 

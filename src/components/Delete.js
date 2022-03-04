@@ -9,7 +9,11 @@ export default class Delete extends Component {
 
   handleClick(event) {
     //this.props.index = index
-    this.props.deleteEducation(this.props.index)
+    if(this.props.education) {
+      this.props.deleteEducation(this.props.index)
+    } else if (this.props.experience) {
+      this.props.deleteExperience(this.props.index)
+    }
     event.preventDefault();
   }
 

@@ -55,7 +55,7 @@ export default class Education extends Component {
 
   render() {
     let x = []
-    x.push(<div key="education-header">Education: </div>);
+    x.push(<div key="education-header">Education </div>);
     for(let i = 0; i < this.state.count; i++) {
       x.push(
         <div id={'education' + i} key={'education' + i}>
@@ -69,7 +69,7 @@ export default class Education extends Component {
             <input index={i} name="to" placeholder="To" type="text"></input>
           </form> */
           /* <button id={i + 'del'} onClick={this.deleteEducation}>Delete</button> */}
-          <Delete index={i} deleteEducation={this.deleteEducation} />
+          <Delete education={true} index={i} deleteEducation={this.deleteEducation} />
         </div>
       )
     }

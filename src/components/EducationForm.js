@@ -3,14 +3,7 @@ import React, { Component } from 'react';
 export default class EducationForm extends Component {
   constructor(props){
     super(props)
-    this.state = {
-      university: '',
-      city: '',
-      degree: '',
-      subject: '',
-      from: '',
-      to: ''
-    }
+
     this.changeAppState = this.changeAppState.bind(this)
   }
 
