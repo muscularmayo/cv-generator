@@ -53,8 +53,6 @@ class App extends Component {
       educationInfo.splice(index, 1)
     }
     this.setState({education: educationInfo})
-
-
   }
 
   handleExperienceChange (object, index, del) {

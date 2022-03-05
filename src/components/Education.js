@@ -28,9 +28,7 @@ export default class Education extends Component {
       }
     }
 
-    if(name && info) {
-      educationObject[name] = info;
-    }
+    educationObject[name] = info;
 
     this.props.handleEducationChange(educationObject, index)
   }

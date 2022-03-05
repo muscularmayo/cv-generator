@@ -27,9 +27,9 @@ export default class Experience extends Component {
       }
     }
 
-    if(name && info) {
-      experienceObject[name] = info;
-    }
+
+    experienceObject[name] = info;
+
 
     this.props.handleExperienceChange(experienceObject, index)
   }
