@@ -35,7 +35,7 @@ export default class Photo extends Component {
 	};
 
   handleChange (event) {
-    this.props.changeAppState(this.props.info, event.target.value)
+    this.props.changeAppState(this.props.info, event.target.files[0])
     this.setState({selectedFile: event.target.files[0]})
     this.setState({isSelected: true})
   }
@@ -43,7 +43,7 @@ export default class Photo extends Component {
   render() {
     return (
       <div>
-          <input type="file" name="photo" alt="photo" onChange={this.handleChange}/>
+          <input type="file" name="photo" onChange={this.handleChange}/>
           <div>
             <button onClick={this.handleSubmission}>Submit</button>
           </div>
