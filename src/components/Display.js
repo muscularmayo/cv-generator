@@ -31,6 +31,7 @@ export default class Display extends Component {
           <div>City: {element.city} </div>
           <div>From: {element.from} </div>
           <div>To: {element.to} </div>
+          <div>Job Description: {element.description} </div>
         </div>
       )
     })

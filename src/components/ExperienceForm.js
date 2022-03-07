@@ -22,6 +22,7 @@ export default class ExperienceForm extends Component {
         <input value={this.props.experienceState.city} index={this.props.index} name="city" placeholder="City" type="text" onChange={this.changeAppState}></input>
         <input value={this.props.experienceState.from} index={this.props.index} name="from" placeholder="From" type="text" onChange={this.changeAppState}></input>
         <input value={this.props.experienceState.to} index={this.props.index} name="to" placeholder="To" type="text" onChange={this.changeAppState}></input>
+        <input value={this.props.experienceState.description} index={this.props.index} name="description" placeholder="Job Description" type="text" onChange={this.changeAppState}></input>
       </form>
     )
   }

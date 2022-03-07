@@ -32,6 +32,7 @@ class App extends Component {
         city: '',
         from: '',
         to: '',
+        description: '',
       }],
     }
     this.handlePersonalInformationChange = this.handlePersonalInformationChange.bind(this)

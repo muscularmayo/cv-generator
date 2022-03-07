@@ -23,7 +23,8 @@ export default class Experience extends Component {
         company: '',
         city: '',
         from: '',
-        to: ''
+        to: '',
+        description: '',
       }
     }
 
