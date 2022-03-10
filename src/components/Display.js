@@ -38,8 +38,10 @@ export default class Display extends Component {
     return (
       <div id="display">
         <div id="personal-info-display">
-          <div id="name">Name: {personalInformation.name}</div>
-          <div id="job-title">Job Title: {personalInformation.jobTitle}</div>
+          <h4 id="name-and-title">
+            <div id="name"> {personalInformation.name}</div>
+            <div id="job-title"> {personalInformation.jobTitle}</div>
+          </h4>
           <img id="photo" src={personalInformation.photo} alt="cover pic"></img>
           <div id="address">Address: {personalInformation.address}</div>
           <div id="phone-number">Phone Number: {personalInformation.phoneNumber}</div>
