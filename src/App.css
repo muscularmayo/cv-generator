@@ -6,11 +6,70 @@ body {
   border-radius:5px;
   border-color:black;
   border-style: solid;
-  background:lightblue;
+  background: rgb(255, 255, 255);
+  margin:0;
+  padding:0;
+}
+
+#inner-display {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+#biography-header {
+  border-right: 1px;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-top: 0px;
+  border-color: black;
+  border-style: solid;
+  font-size: larger;
+  grid-column-start:1
+}
+
+#biography {
+  font-size: normal;
+  grid-column-start:1;
+  border-bottom: 1px;
+  border-left: 0px;
+  border-top: 0px;
+  border-right: 0px;
+  border-color: black;
+  border-style: solid;
+}
+
+#personal-info-display {
+  background: rgba(255, 255, 255, 0.925);
+  grid-column-start: 2;
+  border-right: 0px;
+  border-bottom: 0px;
+  border-left: 1px;
+  border-top: 0px;
+  border-color: black;
+  border-style: solid;
+}
+
+#education-display, #experience-display {
+  grid-column-start: 1;
+  border-right: 1px;
+  border-bottom: 1px;
+  border-left: 0px;
+  border-top: 0px;
+  border-color: black;
+  border-style: solid;
+  font-size: larger;
+}
+
+#education-display > .education-display, #experience-display > .experience-display {
+  font-size: normal;
 }
 
 #name {
-  font-size: large;
+  font-size: xx-large;
+}
+
+#title {
+  font-size: x-large;
 }
 
 #name-and-title {

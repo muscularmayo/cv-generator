@@ -12,48 +12,55 @@ export default class Display extends Component {
     const educationList = educationInformation.map((element, index) => {
       //element is an object
       return(
-        <div key={'education' + index}>
-          <div>University: {element.university} </div>
-          <div>City: {element.city} </div>
-          <div>Degree: {element.degree} </div>
-          <div>Subject: {element.subject} </div>
-          <div>From: {element.from} </div>
-          <div>To: {element.to} </div>
+        <div className="education-display" key={'education' + index}>
+          <div className="university">University: {element.university} </div>
+          <div className="city">City: {element.city} </div>
+          <div className="degree">Degree: {element.degree} </div>
+          <div className="subject">Subject: {element.subject} </div>
+          <div className="from education-from">From: {element.from} </div>
+          <div className="to education-to">To: {element.to} </div>
         </div>
       )
     })
 
     const experienceList = experienceInformation.map((element, index) => {
       return (
-        <div key={'experience' + index}>
-          <div>Position: {element.position} </div>
-          <div>Company: {element.company} </div>
-          <div>City: {element.city} </div>
-          <div>From: {element.from} </div>
-          <div>To: {element.to} </div>
-          <div>Job Description: {element.description} </div>
+        <div className="experience-display" key={'experience' + index}>
+          <div className="position">Position: {element.position} </div>
+          <div className="company">Company: {element.company} </div>
+          <div className="city">City: {element.city} </div>
+          <div className="from experience-from">From: {element.from} </div>
+          <div className="to experience-to">To: {element.to} </div>
+          <div className="description">Job Description: {element.description} </div>
         </div>
       )
     })
     return (
       <div id="display">
-        <div id="personal-info-display">
-          <h4 id="name-and-title">
+        <div id="name-and-title">
             <div id="name"> {personalInformation.name}</div>
             <div id="job-title"> {personalInformation.jobTitle}</div>
-          </h4>
-          <img id="photo" src={personalInformation.photo} alt="cover pic"></img>
-          <div id="address">Address: {personalInformation.address}</div>
-          <div id="phone-number">Phone Number: {personalInformation.phoneNumber}</div>
-          <div id="email">Email: {personalInformation.email} </div>
-          <div id="biography">Biography: {personalInformation.biography} </div>
         </div>
-        <div id="education-display">
-          {educationList}
+        <div id="inner-display">
+          <div id="biography-header">Biography</div>
+          <div id="biography"> {personalInformation.biography}</div>
+
+          <div id="personal-info-display">
+            <img id="photo" src={personalInformation.photo} alt="cover pic"></img>
+            <div id="address">Address: {personalInformation.address}</div>
+            <div id="phone-number">Phone Number: {personalInformation.phoneNumber}</div>
+            <div id="email">Email: {personalInformation.email} </div>
+          </div>
+          <div id="education-display">
+            Education
+            {educationList}
+          </div>
+          <div id="experience-display">
+            Experience
+            {experienceList}
+          </div>
         </div>
-        <div id="experience-display">
-          {experienceList}
-        </div>
+
       </div>
 
     )
