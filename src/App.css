@@ -52,7 +52,7 @@ body {
 #education-display, #experience-display {
   grid-column-start: 1;
   border-right: 1px;
-  border-bottom: 1px;
+  border-bottom: 0px;
   border-left: 0px;
   border-top: 0px;
   border-color: black;
@@ -60,8 +60,24 @@ body {
   font-size: larger;
 }
 
-#education-display > .education-display, #experience-display > .experience-display {
+#education, #experience {
   font-size: normal;
+  grid-column-start: 1;
+  border-right: 1px;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-top: 0px;
+  border-color: black;
+  border-style: solid;
+}
+
+.education-display, .experience-display {
+  border-bottom: 1px;
+  border-right: 0px;
+  border-left: 0px;
+  border-top: 0px;
+  border-color: black;
+  border-style: solid;
 }
 
 #name {

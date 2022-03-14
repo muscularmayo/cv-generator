@@ -51,14 +51,10 @@ export default class Display extends Component {
             <div id="phone-number">Phone Number: {personalInformation.phoneNumber}</div>
             <div id="email">Email: {personalInformation.email} </div>
           </div>
-          <div id="education-display">
-            Education
-            {educationList}
-          </div>
-          <div id="experience-display">
-            Experience
-            {experienceList}
-          </div>
+          <div id="education-display">Education</div>
+          <div id="education">{educationList}</div>
+          <div id="experience-display">Experience </div>
+          <div id="experience"> {experienceList}</div>
         </div>
 
       </div>
