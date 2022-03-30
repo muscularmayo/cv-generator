@@ -1,4 +1,4 @@
-import React, { useState, Component } from 'react';
+import React, { useState } from 'react';
 import EducationForm from './EducationForm';
 import Delete from './Delete.js';
 
